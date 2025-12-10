@@ -21,4 +21,4 @@ ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@<INSTANCE-PUBLIC-IP>
 -to set up new password `sudo passwd ubuntu`
 -logout and then enter with this command - `ssh-copy-id ubuntu@<INSTANCE-IP>`
 - it will ask password that you set up
-- ssh ubuntu<INSTANCE-IP>
+- ssh ubuntu@<INSTANCE-IP>

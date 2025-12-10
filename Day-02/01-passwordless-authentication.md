@@ -3,7 +3,7 @@
 ## EC2 Instances
 
 ### Using Public Key
-
+to generatw this use command `ssh keygen'
 ```
 ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@<INSTANCE-PUBLIC-IP>
 ```
@@ -18,6 +18,7 @@ ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@<INSTANCE-PUBLIC-IP>
 - Go to the file `/etc/ssh/sshd_config.d/60-cloudimg-settings.conf`
 - Update `PasswordAuthentication yes`
 - Restart SSH -> `sudo systemctl restart ssh`
-- ssh-copy-id ubuntu@<public ip>
+-to set up new password `sudo passwd ubuntu`
+-logout and then enter with this command - `ssh-copy-id ubuntu@<INSTANCE-IP>`
 - it will ask password that you set up
-- -ssh ubuntu<ip>
+- ssh ubuntu<INSTANCE-IP>

@@ -96,3 +96,20 @@ ansible-playbook -i inventory <Adhoc command or Playbook.yml>
 ```
 
 `ansible -i inventory.ini -m ping all`- ansible executed this module or task, a command called ping on both the servers and we receive success from both the servers. this -i means gng to the location of inventory.ini where u store the username@ipaddress. eg username could be ubuntu
+
+
+ansible adhoc commands syntax:
+ansible [location of inventory file] -m [module] -a[argument to ue module] [servers that u want to execute]
+
+servers means db server or app server or all
+in vim inventory.ini;
+[app]
+1)server 1 ubuntu@123456
+2)server 2 ubuntu@123678
+[db]
+1)server 1 ubuntu@123453
+2)server 2 ubuntu@123670
+
+ansible -i inventory.ini -m ping all
+ansible -i inventory.ini -m ping ubuntu@123456
+ansible -i inventory.ini -m ping db

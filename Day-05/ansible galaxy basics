@@ -1,0 +1,15 @@
+create 2 nodes and enable opasswordless authemntication 
+then add the public ipv to inventory.ini file. 
+i created my inventory.ini fole in Day-03 and inside 03-first-playbook.
+i have creates my 'test' role also onside this
+use ansible-galaxy role install<name> . example: 'ansible-galaxy role install bsmeding.docker'
+to check where the role is installed. type 'ls ~/.ansible/roles'. this is inside home directory inside hidden ansible folder and inside that u have roles.
+In cd 03-first-playbook. here we have our inventory.ini file . in this create 'vim docker-playbook.yaml'
+---
+- hosts: all
+- become: true
+- roles:
+    - bsmeding.docker
+in above yaml file we are mentioning the role that we installed from ansible galaxy
+then type 'ansible-playbook -i inventory.ini docker-playbook.yaml'
+docker will be installed on our 2 ec2 instance nodes. connect top instances and check for docker is installed or not

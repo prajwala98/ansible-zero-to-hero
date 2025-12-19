@@ -13,3 +13,7 @@ In cd 03-first-playbook. here we have our inventory.ini file . in this create 'v
 in above yaml file we are mentioning the role that we installed from ansible galaxy
 then type 'ansible-playbook -i inventory.ini docker-playbook.yaml'
 docker will be installed on our 2 ec2 instance nodes. connect top instances and check for docker is installed or not
+ use this command 'git remote set-url origin https://username:token@github.com/username/repository.git' before pusing your git repo
+username-prajwala98
+token is the api token generated in github 
+if we dont do this above step there authentication issues while pushing git repo onto git
